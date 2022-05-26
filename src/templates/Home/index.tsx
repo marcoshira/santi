@@ -1,10 +1,36 @@
+import { useSession } from 'next-auth/react';
 import * as Styled from './styles';
-import { CloneMe } from '../../components/CloneMe';
+
+export type StrapiSession = {
+  expires: string;
+  user: UserObj;
+};
+
+export type UserObj = {
+  jwt: string;
+  user: User;
+};
+
+export type User = {
+  id: number;
+  username: string;
+  email: string;
+  provider: string;
+  confirmed: boolean;
+  blocked: boolean;
+  createdAt: string;
+  updatedAt: string;
+};
 
 export function Home() {
+  const { data: session } = useSession();
+  const newSession = session as StrapiSession;
+
   return (
     <Styled.Wrapper>
-      <CloneMe text="Clone me" />
+      <span>
+        {session ? <h1>Oi {newSession.user.user.username}</h1> : <h1>Oi</h1>}
+      </span>
     </Styled.Wrapper>
   );
 }

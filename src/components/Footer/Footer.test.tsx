@@ -1,10 +1,11 @@
 import { screen } from '@testing-library/react';
-import { CloneMe } from '.';
+import { Footer } from '.';
 import { renderTheme } from '../../styles/render-theme';
 
-describe('<CloneMe />', () => {
+describe('<Footer />', () => {
   it('should render', () => {
-    renderTheme(<CloneMe />);
+    const { container } = renderTheme(<Footer footerHtml={'<h1>Oi</h1>'} />);
     expect(screen.getByRole('heading')).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
   });
 });

@@ -1,4 +1,4 @@
-import { ThemeProvider } from 'styled-components';
+import { BlogThemeProvider } from '../src/contexts/BlogThemeContext/index'
 import { GlobalStyles } from '../src/styles/global-styles'
 import { theme } from '../src/styles/theme'
 
@@ -13,7 +13,7 @@ export const parameters = {
       },
       {
         name: 'dark',
-        value: theme.colors.primaryColor,
+        value: theme.colors.black,
       },
     ]
   }
@@ -21,9 +21,9 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={theme}>
+    <BlogThemeProvider>
       <Story />
       <GlobalStyles />
-    </ThemeProvider>
+    </BlogThemeProvider>
   )
 ];
