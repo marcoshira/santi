@@ -5,7 +5,7 @@ export const Container = styled.a`
     display: block;
     color: ${theme.colors.teal};
     text-decoration: none;
-    margin-bottom: ${theme.spacings.small};
+    margin-bottom: ${theme.spacings.ltlarge};
     font-size: 1.8rem;
     border-right: 0.5rem solid ${theme.colors.teal};
     transition: all 300ms ease-in-out;

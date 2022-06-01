@@ -4,7 +4,7 @@ import * as Styled from './styles';
 export const Button = ({
   children,
   disabled = false,
-  onClick,
+  onClick = null,
 }: ButtonProps) => {
   const handleClick = () => {
     if (onClick) {

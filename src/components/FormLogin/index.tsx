@@ -14,7 +14,6 @@ export const FormLogin = ({ errorMessage, onLogin }: FormLoginProps) => {
   const handleSubmit = async (event: React.FormEvent) => {
     setLoading(true);
     event.preventDefault();
-    await new Promise((r) => setTimeout(r, 5000));
 
     if (onLogin) {
       await onLogin(email, password);
@@ -31,6 +30,7 @@ export const FormLogin = ({ errorMessage, onLogin }: FormLoginProps) => {
         value={email}
         icon={<Email />}
         type="email"
+        errorMessage={errorMessage ? ' ' : null}
       />
       <TextInput
         name="user-password"

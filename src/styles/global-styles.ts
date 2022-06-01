@@ -18,8 +18,8 @@ body{
   font-size: 1.6rem;
   font-family: ${({ theme }) => theme.font.family.default};
   font-weight: 500;
-  color: ${({ theme }) => theme.colors.primaryColor};
-  background: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.teal};
+  background: ${({ theme }) => theme.colors.background2};
 }
 
 h1, h2, h3, h4, h5, h6{

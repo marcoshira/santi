@@ -1,16 +1,7 @@
 import styled, { css } from 'styled-components';
 
-type NavBarBehaviorProps = {
-  navBarVisible: boolean;
-};
-
-const wrapperChanger = (navBarVisible: boolean) => css`
-  left: ${navBarVisible ? '0' : '-27rem'};
-  overflow-y: ${navBarVisible ? 'auto' : 'hidden'};
-`;
-
-export const Wrapper = styled.div<NavBarBehaviorProps>`
-  ${({ theme, navBarVisible }) => css`
+export const Wrapper = styled.div`
+  ${({ theme }) => css`
     background: ${theme.colors.background2};
     border-right: 2px solid ${theme.colors.teal};
     padding: ${theme.spacings.large};
@@ -24,33 +15,10 @@ export const Wrapper = styled.div<NavBarBehaviorProps>`
     left: 0;
     transition: all 300ms ease-in-out;
     overflow-y: auto;
-    ${wrapperChanger(navBarVisible)}
   `}
 `;
 
 export const Nav = styled.nav`
   margin: auto;
   width: 100%;
-`;
-
-const buttonChanger = (menuVisible: boolean) => css`
-  left: ${menuVisible ? '21rem' : '1.5rem'};
-`;
-
-export const OpenClose = styled.a<NavBarBehaviorProps>`
-  ${({ theme, navBarVisible }) => css`
-    position: fixed;
-    top: 7rem;
-    color: ${theme.colors.teal};
-    background: rgb(0, 0, 0, 0);
-    z-index: 2;
-    width: 4.5rem;
-    height: 4.5rem;
-    transition: all 300ms ease-in-out;
-    ${buttonChanger(navBarVisible)}
-
-    &:hover {
-      color: ${theme.colors.thirdColor};
-    }
-  `}
 `;

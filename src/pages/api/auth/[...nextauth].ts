@@ -31,10 +31,8 @@ export default NextAuth({
 
         if (res.ok && userObj) {
           const { user, jwt } = userObj;
-          console.log(userObj);
           return { user, jwt };
         }
-        console.log(res);
         return null;
       },
     }),

@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { FormLogin } from '.';
 import { FormLoginProps } from '../../shared-types/shared-types';
+import { ToggleTheme } from '../ToggleTheme';
 
 export default {
   title: 'FormLogin',

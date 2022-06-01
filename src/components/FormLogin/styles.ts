@@ -8,11 +8,21 @@ export const Wrapper = styled.form`
 export const ButtonWrapper = styled.div`
   ${({ theme }) => css`
     margin-top: ${theme.spacings.medium};
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
     ${Button} {
+      a {
+        text-decoration: none;
+        color: ${theme.colors.footerWhite};
+      }
+      width: 15rem;
       border: 2px solid ${theme.colors.teal};
       background: ${theme.colors.teal};
       color: ${theme.colors.footerWhite};
       border-radius: ${theme.spacings.tiny};
+      margin-left: 0;
       &:hover {
         background: ${theme.colors.hoverTeal};
       }
@@ -21,7 +31,7 @@ export const ButtonWrapper = styled.div`
       }
       &:disabled {
         background: ${theme.colors.mediumGrey};
-        color: ${theme.colors.white};
+        color: ${theme.colors.footerWhite};
         border: 2px solid ${theme.colors.mediumGrey};
 
         &:hover {

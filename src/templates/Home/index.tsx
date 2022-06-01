@@ -1,4 +1,5 @@
-import { useSession } from 'next-auth/react';
+// import { useSession } from 'next-auth/react';
+import { Base, BaseProps } from '../Base';
 import * as Styled from './styles';
 
 export type StrapiSession = {
@@ -22,15 +23,15 @@ export type User = {
   updatedAt: string;
 };
 
-export function Home() {
-  const { data: session } = useSession();
-  const newSession = session as StrapiSession;
+export type HomeProps = BaseProps;
+
+export function Home({ data, types }: HomeProps) {
+  // const { data: session } = useSession();
+  // const newSession = session as StrapiSession;
 
   return (
     <Styled.Wrapper>
-      <span>
-        {session ? <h1>Oi {newSession.user.user.username}</h1> : <h1>Oi</h1>}
-      </span>
+      <Base data={data} types={types} />
     </Styled.Wrapper>
   );
 }
