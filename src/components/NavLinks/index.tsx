@@ -1,5 +1,6 @@
 import { AccountCircle } from '@styled-icons/material-outlined/AccountCircle';
 import { ShoppingBag } from '@styled-icons/material-outlined/ShoppingBag';
+import { FavoriteBorder } from '@styled-icons/material-outlined/FavoriteBorder';
 import { Button } from '../Button';
 import * as Styled from './styles';
 import Link from 'next/link';
@@ -28,9 +29,14 @@ export const NavLinks = () => {
           <a href="#" onClick={handleClick}>
             Log Out
           </a>
-          <Link href="/cart">
+          <Link href="/profile?id=cart">
             <Styled.SvgContainer>
               <ShoppingBag />
+            </Styled.SvgContainer>
+          </Link>
+          <Link href="/profile?id=favorites">
+            <Styled.SvgContainer>
+              <FavoriteBorder />
             </Styled.SvgContainer>
           </Link>
           <Link href="/profile">
@@ -52,8 +58,15 @@ export const NavLinks = () => {
             <a>Login</a>
           </Link>
 
-          <Link href="/register">
-            <Button>Register</Button>
+          <Link
+            href={{
+              pathname: '/register',
+              query: {
+                redirect,
+              },
+            }}
+          >
+            <a>Register</a>
           </Link>
         </>
       )}
@@ -62,20 +75,21 @@ export const NavLinks = () => {
 
   // return (
   //   <Styled.Container aria-label="Main menu">
-  //     <Link
-  //       href={{
-  //         pathname: '/login',
-  //         query: {
-  //           redirect,
-  //         },
-  //       }}
-  //     >
-  //       <a>Login</a>
-  //     </Link>
-
-  //     <Link href="/register">
-  //       <Button>Register</Button>
-  //     </Link>
+  //     <>
+  //       <a href="#" onClick={handleClick}>
+  //         Log Out
+  //       </a>
+  //       <Link href="/cart">
+  //         <Styled.SvgContainer>
+  //           <ShoppingBag />
+  //         </Styled.SvgContainer>
+  //       </Link>
+  //       <Link href="/profile">
+  //         <Styled.SvgContainer>
+  //           <AccountCircle />
+  //         </Styled.SvgContainer>
+  //       </Link>
+  //     </>
   //   </Styled.Container>
   // );
 };

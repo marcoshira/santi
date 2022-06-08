@@ -21,6 +21,8 @@ export type User = {
   blocked: boolean;
   createdAt: string;
   updatedAt: string;
+  address: string;
+  phone: string;
 };
 
 export type HomeProps = BaseProps;

@@ -11,7 +11,7 @@ export const GQL_GET_CART_ID = gql`
   }
 `;
 
-export const GQL_GET_PRODUCTS = gql`
+export const GET_CART_BY_USER_ID = gql`
   ${GQL_FRAGMENT_CART}
 
   query GET_CART_BY_USER_ID($userID: ID!) {

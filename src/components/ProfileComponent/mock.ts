@@ -1,22 +1,25 @@
-import { ProfileComponentProps } from '../../shared-types/shared-types';
+import { UserProps } from '../../shared-types/shared-types';
 
 export default {
   data: {
     usersPermissionsUser: {
       data: {
-        id: '1',
+        id: '2',
         attributes: {
-          username: 'joao',
-          email: 'joao@gmail.com',
-          puchase: {
+          username: 'luisa',
+          email: 'lulusantiago00@gmail.com',
+          confirmed: false,
+          address: 'Rua Barão de spdaksadopk',
+          phone: '2222 2222',
+          createdAt: '2022-05-16T21:40:09.110Z',
+          cart_quantity: {
             data: {
-              id: '1',
+              id: '6',
               attributes: {
-                Item: [
+                cartQuantity: [
                   {
-                    id: '1',
-                    Quantity: 2,
-                    date: '1999-10-01',
+                    id: '10',
+                    quantity: 5,
                     product: {
                       data: {
                         id: '2',
@@ -46,30 +49,29 @@ export default {
                     },
                   },
                   {
-                    id: '2',
-                    Quantity: 3,
-                    date: '2000-10-05',
+                    id: '10',
+                    quantity: 5,
                     product: {
                       data: {
-                        id: '5',
+                        id: '2',
                         attributes: {
-                          name: 'Pokémon Legends: Arceus',
+                          name: 'PlayStation 5',
                           description:
-                            'Prepare-se para um novo tipo de grande aventura Pokémon em Pokémon™ Legends: Arceus, um jogo totalmente novo da Game Freak que combina ação e exploração com as raízes de RPG da série Pokémon. Embarque em missões de pesquisa na antiga região de Hisui. Explore extensões naturais para capturar Pokémon selvagens, aprendendo seu comportamento, aproximando-se sorrateiramente e jogando uma Poké Ball™ bem direcionada. Você também pode jogar a Poké Ball contendo seu Pokémon aliado perto de um Pokémon selvagem para entrar na batalha sem problemas.',
-                          price: 34999,
-                          stock: 16,
+                            'Jogar não tem Limites. Desfrute do carregamento extremamente rápido com o SSD de altíssima velocidade, uma imersão mais profunda com suporte a feedback tátil, gatilhos adaptáveis e áudio 3D, além de uma geração inédita de jogos incríveis para Console PlayStation®5 - PS5. Domine o poder de uma CPU e GPU personalizadas e o SSD com E/S integradas que redefinem as regras do que o console PlayStation 5 pode fazer. Descubra uma experiência de jogos mais profunda com compatibilidade com feedback tátil, disparadores adaptáveis e tecnologia de áudio 3D.',
+                          price: 479999,
+                          stock: 14,
                           cover: {
                             data: {
                               attributes: {
-                                url: 'https://res.cloudinary.com/djqrityvi/image/upload/v1652885725/pokemon_arc_6e9e8de332.jpg',
+                                url: 'https://res.cloudinary.com/djqrityvi/image/upload/v1652740674/ps5_8a252e1eaa.jpg',
                               },
                             },
                           },
                           product_type: {
                             data: {
-                              id: '3',
+                              id: '2',
                               attributes: {
-                                title: 'Switch Game',
+                                title: 'Console',
                               },
                             },
                           },
@@ -81,13 +83,9 @@ export default {
               },
             },
           },
-          cartQuantity: {
-            prodId: 2,
-            quantity: 1,
-          },
-          cart: {
+          favorite: {
             data: {
-              id: '6',
+              id: '4',
               attributes: {
                 products: {
                   data: [
@@ -171,8 +169,81 @@ export default {
               },
             },
           },
+          puchase: {
+            data: {
+              id: '5',
+              attributes: {
+                Item: [
+                  {
+                    id: '10',
+                    Quantity: 2,
+                    date: '2022-05-01',
+                    product: {
+                      data: {
+                        id: '2',
+                        attributes: {
+                          name: 'PlayStation 5',
+                          description:
+                            'Jogar não tem Limites. Desfrute do carregamento extremamente rápido com o SSD de altíssima velocidade, uma imersão mais profunda com suporte a feedback tátil, gatilhos adaptáveis e áudio 3D, além de uma geração inédita de jogos incríveis para Console PlayStation®5 - PS5. Domine o poder de uma CPU e GPU personalizadas e o SSD com E/S integradas que redefinem as regras do que o console PlayStation 5 pode fazer. Descubra uma experiência de jogos mais profunda com compatibilidade com feedback tátil, disparadores adaptáveis e tecnologia de áudio 3D.',
+                          price: 479999,
+                          stock: 14,
+                          cover: {
+                            data: {
+                              attributes: {
+                                url: 'https://res.cloudinary.com/djqrityvi/image/upload/v1652740674/ps5_8a252e1eaa.jpg',
+                              },
+                            },
+                          },
+                          product_type: {
+                            data: {
+                              id: '2',
+                              attributes: {
+                                title: 'Console',
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                  {
+                    id: '10',
+                    Quantity: 2,
+                    date: '2022-05-01',
+                    product: {
+                      data: {
+                        id: '2',
+                        attributes: {
+                          name: 'PlayStation 5',
+                          description:
+                            'Jogar não tem Limites. Desfrute do carregamento extremamente rápido com o SSD de altíssima velocidade, uma imersão mais profunda com suporte a feedback tátil, gatilhos adaptáveis e áudio 3D, além de uma geração inédita de jogos incríveis para Console PlayStation®5 - PS5. Domine o poder de uma CPU e GPU personalizadas e o SSD com E/S integradas que redefinem as regras do que o console PlayStation 5 pode fazer. Descubra uma experiência de jogos mais profunda com compatibilidade com feedback tátil, disparadores adaptáveis e tecnologia de áudio 3D.',
+                          price: 479999,
+                          stock: 14,
+                          cover: {
+                            data: {
+                              attributes: {
+                                url: 'https://res.cloudinary.com/djqrityvi/image/upload/v1652740674/ps5_8a252e1eaa.jpg',
+                              },
+                            },
+                          },
+                          product_type: {
+                            data: {
+                              id: '2',
+                              attributes: {
+                                title: 'Console',
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                ],
+              },
+            },
+          },
         },
       },
     },
   },
-};
+} as UserProps;

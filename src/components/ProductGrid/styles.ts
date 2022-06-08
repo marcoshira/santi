@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
     margin-left: 33rem;
     margin-top: 8rem;
     grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+    margin-bottom: 2rem;
     gap: ${theme.spacings.xlarge};
     padding: ${theme.spacings.small};
     @media ${theme.media.lteSmall} {

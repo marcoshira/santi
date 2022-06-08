@@ -37,7 +37,7 @@ export const ImageWrapper = styled.div`
 
     img {
       border-radius: 10px;
-      height: 35rem;
+      height: 28rem;
     }
   `}
 `;
@@ -51,6 +51,20 @@ export const TextWrapper = styled.div`
     color: ${theme.colors.navy};
     margin-top: 2rem;
     position: relative;
+
+    svg {
+      height: 3rem;
+      position: absolute;
+      top: 0;
+      right: 2rem;
+      color: ${theme.colors.teal};
+      cursor: pointer;
+      transition: ${theme.transitions.fast};
+
+      &:hover {
+        color: ${theme.colors.hoverTeal};
+      }
+    }
 
     p {
       margin: 0 0 0 ${theme.spacings.medium};

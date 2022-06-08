@@ -30,6 +30,18 @@ export type FormLoginProps = {
   onLogin?: (email: string, password: string) => Promise<void>;
 };
 
+export type FormRegisterProps = {
+  errorMessage?: string;
+  onRegister?: (
+    username: string,
+    email: string,
+    password: string,
+    confirmPassword: string,
+    telephone: string,
+    address: string,
+  ) => Promise<void>;
+};
+
 export type ProductQueryProps = {
   data: ProductProps;
   types: ProductTypesProps;
@@ -120,26 +132,63 @@ export type ProductTypesProps = {
   data: ProductTypePropsData[];
 };
 
-export type ProfileComponentProps = {
-  purchase: PurchaseProps;
-  cart: CartProps;
-  cartQuantity: CartQuantityProps;
+export type UserProps = {
+  data: {
+    usersPermissionsUser: UserPermissionProps;
+  };
+};
+
+export type UserPermissionProps = {
+  data: {
+    id: string;
+    attributes: ProfileComponentProps;
+  };
+};
+
+export type ProfileLinkProps = {
   username: string;
   email: string;
+  phone: string;
+  address: string;
+  createdAt: string;
+  onSubmit?: (
+    username?: string,
+    email?: string,
+    telephone?: string,
+    address?: string,
+  ) => Promise<void>;
 };
+
+export type ProfileComponentProps = {
+  puchase: PurchaseProps;
+  cart_quantity: CartQuantityProps;
+  confirmed?: boolean;
+  favorite: FavoriteProps;
+  redirect?: string | null;
+} & ProfileLinkProps;
 
 export type CartQuantityProps = {
-  prodId: string;
-  quantity: number;
+  data: {
+    id: string;
+    attributes: {
+      cartQuantity: CartQuantityAttributesProps[];
+    };
+  };
 };
 
-export type CartProps = {
-  data: CartDataProps;
+export type FavoriteProps = {
+  data: {
+    id: string;
+    attributes: {
+      products: ProductGridPropsProducts;
+    };
+  };
 };
 
-export type CartDataProps = {
+export type CartQuantityAttributesProps = {
   id: string;
-  attributes: ProductGridProps;
+  quantity: number;
+  product: ProductProps;
 };
 
 export type PurchaseProps = {

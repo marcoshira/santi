@@ -3,12 +3,27 @@ import { useState } from 'react';
 import { ProductCardArrayProps } from '../../shared-types/shared-types';
 import { Button } from '../Button';
 import * as Styled from './styles';
+import { Favorite } from '@styled-icons/material-outlined/Favorite';
+import { FavoriteBorder } from '@styled-icons/material-outlined/FavoriteBorder';
 
-export const ProductPage = ({ attributes }: ProductCardArrayProps) => {
+export type InputProps = {
+  onInputChange?: (value: string) => void;
+};
+
+export const ProductPage = ({
+  attributes,
+  onInputChange,
+}: ProductCardArrayProps & InputProps) => {
   const maxLength = 350;
   const [fullTxt, setFullTxt] = useState(false);
   const [quant, setQuant] = useState(1);
   const [disabled, setDisabled] = useState(true);
+
+  const [favorite, setFavorite] = useState(false);
+
+  const handleChange = (value) => {
+    setQuant(value);
+  };
 
   const minusBtn = (quant) => {
     if (quant === 2) {
@@ -32,6 +47,9 @@ export const ProductPage = ({ attributes }: ProductCardArrayProps) => {
         </Styled.ImageWrapper>
         <Styled.TextWrapper>
           <p id="title">{attributes.name}</p>
+          <a onClick={() => setFavorite(!favorite)}>
+            {favorite ? <Favorite /> : <FavoriteBorder />}
+          </a>
           <Link href={`/types/${attributes.product_type.data.id}`}>
             <a>
               <p>{attributes.product_type.data.attributes.title}</p>
@@ -43,7 +61,11 @@ export const ProductPage = ({ attributes }: ProductCardArrayProps) => {
             <Styled.Button onClick={() => minusBtn(quant)} disabled={disabled}>
               -
             </Styled.Button>
-            <input type="text" defaultValue={1} value={quant} />
+            <input
+              type="text"
+              value={quant}
+              onChange={(v) => handleChange(v)}
+            />
             <Styled.Button onClick={() => plusBtn(quant)}>+</Styled.Button>
           </Styled.InputWrapper>
           <Styled.ButtonContainer>

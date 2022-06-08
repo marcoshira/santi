@@ -14,7 +14,7 @@ export const Container = styled.nav`
 
     a {
       text-decoration: none;
-      padding: ${theme.spacings.xxsmall} ${theme.spacings.xsmall};
+      padding: ${theme.spacings.xxsmall} ${theme.spacings.tiny};
       background: inherit;
       color: ${theme.colors.teal};
       /* border: 0.5px solid ${theme.colors.teal}; */

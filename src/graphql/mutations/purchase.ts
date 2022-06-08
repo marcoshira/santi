@@ -1,13 +1,11 @@
 import { gql } from 'graphql-request';
 import { GQL_FRAGMENT_PRODUCT } from '../fragments/products';
+import { GQL_FRAGMENT_PURCHASE } from '../fragments/purchase';
 
 export const GQL_CREATE_PURCHASE = gql`
   ${GQL_FRAGMENT_PRODUCT}
 
-  mutation CREATE_PURCHASE(
-    $userID: ID!
-    $Items: [ComponentPurchaseItemsInput]
-  ) {
+  mutation PURCHASE($userID: ID!, $Items: [ComponentPurchaseItemsInput]) {
     createPuchase(data: { user: $userID, Item: $Items }) {
       data {
         id
@@ -41,28 +39,15 @@ export const GQL_CREATE_PURCHASE = gql`
 `;
 
 export const GQL_UPDATE_PURCHASE = gql`
+  ${GQL_FRAGMENT_PURCHASE}
   ${GQL_FRAGMENT_PRODUCT}
 
-  mutation UPDATE_PURCHASE(
-    $purchaseID: ID!
-    $Items: [ComponentPurchaseItemsInput]
-  ) {
-    updatePuchase(id: $purchaseID, data: { Item: $Items }) {
+  mutation UPDATE_PURCHASE($id: ID!, $purchase: PuchaseInput!) {
+    updatePuchase(id: $id, data: $purchase) {
       data {
+        id
         attributes {
-          Item {
-            id
-            Quantity
-            date
-            product {
-              data {
-                id
-                attributes {
-                  ...product
-                }
-              }
-            }
-          }
+          ...purchase
         }
       }
     }

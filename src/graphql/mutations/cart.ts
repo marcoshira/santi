@@ -1,15 +1,22 @@
 import { gql } from 'graphql-request';
 import { GQL_FRAGMENT_CART } from '../fragments/cart';
+import { GQL_FRAGMENT_PRODUCT } from '../fragments/products';
 
 export const GQL_CREATE_CART = gql`
   ${GQL_FRAGMENT_CART}
+  ${GQL_FRAGMENT_PRODUCT}
 
-  mutation CREATE_CART($prodIDs: [ID], $userID: ID!) {
-    createCart(data: { products: $prodIDs, user: $userID }) {
+  mutation CARTQUANT(
+    $cart: [ComponentCartQuantityCartQuantityInput]
+    $userID: ID!
+  ) {
+    createCartQuantity(
+      data: { cartQuantity: $cart, users_permissions_user: $userID }
+    ) {
       data {
         id
         attributes {
-          ...cart
+          ...quant
         }
       }
     }
@@ -18,13 +25,14 @@ export const GQL_CREATE_CART = gql`
 
 export const GQL_UPDATE_CART = gql`
   ${GQL_FRAGMENT_CART}
+  ${GQL_FRAGMENT_PRODUCT}
 
-  mutation UPDATE_CART($cartID: ID!, $productsIDS: [ID]) {
-    updateCart(id: $cartID, data: { products: $productsIDS }) {
+  mutation UPDATE_CARTQUANT($id: ID!, $cartQuant: CartQuantityInput!) {
+    updateCartQuantity(id: $id, data: $cartQuant) {
       data {
         id
         attributes {
-          ...cart
+          ...quant
         }
       }
     }
