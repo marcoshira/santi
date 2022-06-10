@@ -20,7 +20,7 @@ export const GQL_CREATE_FAVORITE = gql`
   }
 `;
 
-export const GQL_UPDATE_CART = gql`
+export const GQL_UPDATE_FAVORITE = gql`
   ${GQL_FRAGMENT_FAVORITE}
   ${GQL_FRAGMENT_PRODUCT}
 

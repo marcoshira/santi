@@ -1,18 +1,34 @@
 import Link from 'next/link';
+import { Close } from '@styled-icons/material-outlined/Close';
 import { ItemProps } from '../../shared-types/shared-types';
 import { formatDate } from '../../utils/format-date';
 import { Button } from '../Button';
 import { Heading } from '../Heading';
 import * as Styled from './styles';
+import { InputProps } from '../ProductPage';
 
-export const PurchaseCard = ({ Quantity, date, product }: ItemProps) => {
+export const PurchaseCard = ({
+  Quantity,
+  date,
+  product,
+  onPurchase,
+}: ItemProps & InputProps) => {
+  const handlePurchase = async (quant: number, id: string) => {
+    console.log('oi');
+    if (onPurchase) {
+      console.log('oi2');
+      await onPurchase(quant, id);
+    }
+  };
   return (
     <Styled.Wrapper>
-      <Link href={`/products/${product.data.id}`}>
-        <a>
-          <img src={product.data.attributes.cover.data.attributes.url} />
-        </a>
-      </Link>
+      <Styled.ImageWrapper>
+        <Link href={`/products/${product.data.id}`}>
+          <a>
+            <img src={product.data.attributes.cover.data.attributes.url} />
+          </a>
+        </Link>
+      </Styled.ImageWrapper>
 
       <Styled.ContentWrapper>
         <Link href={`/products/${product.data.id}`}>
@@ -20,6 +36,9 @@ export const PurchaseCard = ({ Quantity, date, product }: ItemProps) => {
             <Heading size="medium">{product.data.attributes.name}</Heading>
           </a>
         </Link>
+        <a id="close" onClick={() => handlePurchase(Quantity, product.data.id)}>
+          <Close />
+        </a>
 
         <p>
           Price: R$ {product.data.attributes.price / 100} | Quantity: {Quantity}
@@ -28,7 +47,11 @@ export const PurchaseCard = ({ Quantity, date, product }: ItemProps) => {
           Total price: R$: {(product.data.attributes.price * Quantity) / 100}
         </p>
         <p id="date">Bought at {formatDate(date)}</p>
-        <Button>Buy Again</Button>
+        <Link href={`/products/${product.data.id}`}>
+          <a>
+            <Button>Buy Again</Button>
+          </a>
+        </Link>
       </Styled.ContentWrapper>
     </Styled.Wrapper>
   );

@@ -1,5 +1,8 @@
+import { Session } from 'inspector';
 import React, { ButtonHTMLAttributes, InputHTMLAttributes } from 'react';
 import { LoadProductVariables } from '../api/load-products';
+import { InputProps } from '../components/ProductPage';
+import { StrapiSession } from '../templates/Home';
 
 export type ButtonProps = {
   children: React.ReactNode;
@@ -25,6 +28,16 @@ export type TextInputProps = {
   reference?: HTMLInputElement;
 } & InputHTMLAttributes<HTMLInputElement>;
 
+export type InputNProps = {
+  label: string;
+  name: string;
+  type?: string;
+  onInputChange?: (value: string) => void;
+  errorMessage?: string;
+  value?: string;
+  reference?: HTMLInputElement;
+} & InputHTMLAttributes<HTMLInputElement>;
+
 export type FormLoginProps = {
   errorMessage?: string;
   onLogin?: (email: string, password: string) => Promise<void>;
@@ -46,6 +59,8 @@ export type ProductQueryProps = {
   data: ProductProps;
   types: ProductTypesProps;
   variables?: LoadProductVariables;
+  cartBool?: boolean;
+  favBool?: boolean;
 };
 
 export type ProductsByTypeQueryProps = {
@@ -133,9 +148,7 @@ export type ProductTypesProps = {
 };
 
 export type UserProps = {
-  data: {
-    usersPermissionsUser: UserPermissionProps;
-  };
+  usersPermissionsUser: UserPermissionProps;
 };
 
 export type UserPermissionProps = {
@@ -147,13 +160,12 @@ export type UserPermissionProps = {
 
 export type ProfileLinkProps = {
   username: string;
-  email: string;
   phone: string;
   address: string;
   createdAt: string;
+  errorMessage?: string;
   onSubmit?: (
     username?: string,
-    email?: string,
     telephone?: string,
     address?: string,
   ) => Promise<void>;
@@ -165,6 +177,13 @@ export type ProfileComponentProps = {
   confirmed?: boolean;
   favorite: FavoriteProps;
   redirect?: string | null;
+  onCartCart?: (quant: number, id?: string) => void;
+  onCartPurchase?: (quant: number, id?: string) => void;
+  onPurchasePurchase?: (quant?: number, id?: string) => void;
+  onFavFav?: (id: string) => void;
+  onFavPurchase?: (quant: number, id: string) => void;
+  onFavNoCart?: (id: string) => void;
+  onFavCart?: (quant: number, id?: string) => void;
 } & ProfileLinkProps;
 
 export type CartQuantityProps = {
@@ -174,7 +193,7 @@ export type CartQuantityProps = {
       cartQuantity: CartQuantityAttributesProps[];
     };
   };
-};
+} & InputProps;
 
 export type FavoriteProps = {
   data: {

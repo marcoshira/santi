@@ -6,7 +6,8 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: row;
-    width: 60%;
+    width: 100%;
+    overflow-x: hidden;
     box-shadow: 3px 3px 15px ${theme.colors.teal};
     border-radius: 15px;
     color: ${theme.colors.navy};
@@ -33,55 +34,65 @@ export const Wrapper = styled.div`
     ${Title} {
       margin: 0;
     }
-
-    ${Btn} {
-      a {
-        text-decoration: none;
-        color: ${theme.colors.footerWhite};
-      }
-      position: absolute;
-      bottom: 2rem;
-      right: 4rem;
-      /* width: 15rem; */
-      border: 2px solid ${theme.colors.teal};
-      background: ${theme.colors.teal};
-      color: ${theme.colors.footerWhite};
-      border-radius: ${theme.spacings.tiny};
-      margin-left: 0;
-      &:hover {
-        background: ${theme.colors.hoverTeal};
-      }
-      &::after {
-        height: 0;
-      }
-      &:disabled {
-        background: ${theme.colors.mediumGrey};
-        color: ${theme.colors.footerWhite};
-        border: 2px solid ${theme.colors.mediumGrey};
-
-        &:hover {
-          background: ${theme.colors.mediumGrey};
-          color: ${theme.colors.white};
-          border: 2px solid ${theme.colors.mediumGrey};
-          cursor: not-allowed;
-        }
-
-        &::after {
-          content: none;
-        }
-      }
-    }
   `}
 `;
 
 export const ContentWrapper = styled.div`
   ${({ theme }) => css`
+    width: 55%;
     a {
       text-decoration: none;
       color: ${theme.colors.navy};
       transition: ${theme.transitions.faster};
       &:hover {
         color: ${theme.colors.thirdColor};
+      }
+    }
+  `}
+`;
+
+export const ImageWrapper = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: center;
+    width: 45%;
+  `}
+`;
+
+export const ButtonContainer = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    ${Btn} {
+      min-width: 48%;
+
+      margin: 0rem;
+      margin-right: 1rem;
+      border: 2px solid ${theme.colors.teal};
+      background: ${theme.colors.footerWhite};
+      color: ${theme.colors.teal};
+
+      &:hover {
+        border: 2px solid ${theme.colors.thirdColor};
+        background: ${theme.colors.footerWhite};
+        color: ${theme.colors.thirdColor};
+      }
+
+      &::after {
+        content: none;
+      }
+
+      :nth-of-type(2) {
+        background: ${theme.colors.teal};
+        color: ${theme.colors.footerWhite};
+
+        &:hover {
+          border: 2px solid ${theme.colors.teal};
+          background: ${theme.colors.hoverTeal};
+        }
       }
     }
   `}

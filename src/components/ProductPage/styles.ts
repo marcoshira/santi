@@ -20,6 +20,7 @@ export const ContentWrapper = styled.div`
     border-radius: 10px;
     box-shadow: 3px 3px 15px ${theme.colors.teal};
     background: ${theme.colors.footerWhite};
+    padding-left: ${theme.spacings.small};
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -34,10 +35,12 @@ export const ImageWrapper = styled.div`
     /* width: 50%; */
     border-radius: 10px;
     height: 35rem;
+    width: 45%;
 
     img {
       border-radius: 10px;
-      height: 28rem;
+      max-height: 28rem;
+      min-height: 25rem;
     }
   `}
 `;

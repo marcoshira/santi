@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: row;
-    width: 60%;
+    width: 100%;
     box-shadow: 3px 3px 15px ${theme.colors.teal};
     border-radius: 15px;
     color: ${theme.colors.navy};
@@ -15,8 +15,18 @@ export const Wrapper = styled.div`
     padding: ${theme.spacings.small} 0;
     margin-bottom: ${theme.spacings.ltmedium};
 
+    #close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      svg {
+        height: 3rem;
+      }
+    }
+
     a {
       cursor: pointer;
+
       &:hover {
         img {
           opacity: 0.6;
@@ -42,7 +52,7 @@ export const Wrapper = styled.div`
       position: absolute;
       bottom: 2rem;
       right: 4rem;
-      /* width: 15rem; */
+      padding: ${theme.spacings.xsmall} ${theme.spacings.ltlarge};
       border: 2px solid ${theme.colors.teal};
       background: ${theme.colors.teal};
       color: ${theme.colors.footerWhite};
@@ -91,5 +101,13 @@ export const ContentWrapper = styled.div`
       position: absolute;
       bottom: 0.5rem;
     }
+  `}
+`;
+
+export const ImageWrapper = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: center;
+    width: 45%;
   `}
 `;

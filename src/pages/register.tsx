@@ -22,25 +22,17 @@ export default function RegisterPage() {
     telephone: string,
     address: string,
   ) => {
-    // console.log(username, email, password, confirmPassword, telephone, address);
     if (!(password === confirmPassword)) {
       setError('Senhas não correspondem');
       return null;
     }
 
-    console.log('oi');
-
     try {
-      console.log('oi2');
       const newUser = await gqlClient.request(
         GQL_REGISTER_USER,
         { username: username, email: email, password: password },
         {},
       );
-      console.log('oi3');
-
-      console.log(newUser);
-
       const updatedUser = await gqlClient.request(
         GQL_UPDATE_USER,
         {
@@ -50,7 +42,6 @@ export default function RegisterPage() {
         },
         { Authorization: `Bearer ${newUser.register.jwt}` },
       );
-      console.log('oi44');
       const cart = await gqlClient.request(
         GQL_CREATE_CART,
         {
@@ -58,7 +49,6 @@ export default function RegisterPage() {
         },
         { Authorization: `Bearer ${newUser.register.jwt}` },
       );
-      console.log('oiI');
       const favorites = await gqlClient.request(
         GQL_CREATE_FAVORITE,
         {
@@ -66,7 +56,6 @@ export default function RegisterPage() {
         },
         { Authorization: `Bearer ${newUser.register.jwt}` },
       );
-      console.log('oiI2');
       const purchases = await gqlClient.request(
         GQL_CREATE_PURCHASE,
         {
@@ -74,24 +63,19 @@ export default function RegisterPage() {
         },
         { Authorization: `Bearer ${newUser.register.jwt}` },
       );
-      console.log('oi4');
     } catch (e) {
-      console.log(e);
       return null;
     }
-    console.log('oi5');
     const response = await signIn('credentials', {
       identifier: email,
       password,
       redirect: false,
     });
-    console.log('oi6');
 
     if (!response.ok) {
       setError('Usuário ou senha inválidos');
       return;
     }
-    console.log('oi7');
 
     const redirect = router.query?.redirect || '/';
     router.push(redirect as string);

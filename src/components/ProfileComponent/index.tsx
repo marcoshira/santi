@@ -8,7 +8,6 @@ import { PurchaseLink } from '../PurchaseLink';
 import * as Styled from './styles';
 
 export const ProfileComponent = ({
-  email,
   address,
   cart_quantity,
   createdAt,
@@ -18,13 +17,19 @@ export const ProfileComponent = ({
   favorite,
   onSubmit,
   redirect,
+  onCartCart,
+  onCartPurchase,
+  onPurchasePurchase,
+  onFavCart,
+  onFavFav,
+  onFavNoCart,
+  onFavPurchase,
 }: ProfileComponentProps) => {
   const [navState, setNavState] = useState('profile');
 
   useEffect(() => {
     if (redirect) {
       setNavState(redirect);
-      console.log(redirect);
     }
   }, [redirect]);
 
@@ -46,18 +51,31 @@ export const ProfileComponent = ({
         {navState === 'profile' ? (
           <ProfileLink
             address={address}
-            email={email}
             username={username}
             phone={phone}
             createdAt={createdAt}
             onSubmit={onSubmit}
           />
         ) : navState === 'purchases' ? (
-          <PurchaseLink Item={puchase.data.attributes.Item} />
+          <PurchaseLink
+            onPurchase={onPurchasePurchase}
+            Item={puchase.data.attributes.Item}
+          />
         ) : navState === 'cart' ? (
-          <CartLink data={cart_quantity.data} />
+          <CartLink
+            onCart={onCartCart}
+            onPurchase={onCartPurchase}
+            data={cart_quantity.data}
+          />
         ) : navState === 'favorites' ? (
-          <FavoriteLink data={favorite.data} />
+          <FavoriteLink
+            cart={cart_quantity}
+            onCart={onFavCart}
+            onCartNo={onFavNoCart}
+            onFav={onFavFav}
+            onPurchase={onFavPurchase}
+            data={favorite.data}
+          />
         ) : null}
       </Styled.Content>
     </Styled.Wrapper>

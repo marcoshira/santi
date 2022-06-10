@@ -65,6 +65,7 @@ export const GQL_GET_PRODUCT_BY_ID = gql`
   query GET_PRODUCT_BY_ID($id: ID!) {
     product(id: $id) {
       data {
+        id
         attributes {
           ...product
         }

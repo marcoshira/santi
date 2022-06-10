@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: row;
-    width: 65%;
+    width: 100%;
     box-shadow: 3px 3px 15px ${theme.colors.teal};
     border-radius: 15px;
     color: ${theme.colors.navy};
@@ -50,7 +50,7 @@ export const ContentWrapper = styled.div`
     svg {
       height: 3rem;
       position: absolute;
-      top: 1.8rem;
+      top: 2rem;
       right: 2rem;
       color: ${theme.colors.teal};
       cursor: pointer;
@@ -79,9 +79,9 @@ export const ButtonContainer = styled.div`
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    margin-top: 7rem;
+    margin-top: 3rem;
     ${Btn} {
-      min-width: 48%;
+      min-width: 47%;
 
       margin: 0rem;
       margin-right: 1rem;
@@ -109,5 +109,39 @@ export const ButtonContainer = styled.div`
         }
       }
     }
+  `}
+`;
+
+export const InputWrapper = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    width: 50%;
+    justify-content: left;
+    flex-flow: row nowrap;
+    font-size: 1.6rem;
+    margin-top: 3rem;
+
+    label {
+      margin: 8px ${theme.spacings.ltlarge} 0 0;
+      color: ${theme.colors.darkGrey};
+    }
+
+    input {
+      width: 40px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid ${theme.colors.grey};
+      height: 35px;
+    }
+  `}
+`;
+
+export const Button = styled.button`
+  ${({ theme }) => css`
+    padding: 0 10px;
+    background: ${theme.colors.footerWhite};
+    border: 1px solid ${theme.colors.grey};
   `}
 `;
