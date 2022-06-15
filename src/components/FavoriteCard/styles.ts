@@ -15,6 +15,16 @@ export const Wrapper = styled.div`
     padding: ${theme.spacings.small} 0;
     margin-bottom: ${theme.spacings.ltmedium};
 
+    @media ${theme.media.lteMedium} {
+      flex-direction: column;
+      min-height: 53rem;
+      width: 85%;
+      justify-content: center;
+      align-items: center;
+      margin: ${theme.spacings.medium} auto;
+      padding-bottom: 0;
+    }
+
     a {
       cursor: pointer;
       &:hover {
@@ -28,6 +38,10 @@ export const Wrapper = styled.div`
       border-radius: 10px;
       height: 20rem;
       transition: ${theme.transitions.faster};
+
+      @media ${theme.media.lteMedium} {
+        height: 15rem;
+      }
     }
 
     ${Title} {
@@ -59,6 +73,11 @@ export const ContentWrapper = styled.div`
       &:hover {
         color: ${theme.colors.hoverTeal};
       }
+    }
+
+    @media ${theme.media.lteMedium} {
+      width: 100%;
+      padding: ${theme.spacings.medium};
     }
   `}
 `;
@@ -109,6 +128,16 @@ export const ButtonContainer = styled.div`
         }
       }
     }
+
+    @media ${theme.media.lteMedium} {
+      flex-direction: column;
+      margin-right: 0rem;
+
+      ${Btn} {
+        width: 100%;
+        margin: ${theme.spacings.tiny} 0;
+      }
+    }
   `}
 `;
 
@@ -121,9 +150,18 @@ export const InputWrapper = styled.div`
     font-size: 1.6rem;
     margin-top: 3rem;
 
+    @media ${theme.media.lteMedium} {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
     label {
       margin: 8px ${theme.spacings.ltlarge} 0 0;
       color: ${theme.colors.darkGrey};
+
+      @media ${theme.media.lteMedium} {
+        margin: 7px ${theme.spacings.hero} 0 0;
+      }
     }
 
     input {

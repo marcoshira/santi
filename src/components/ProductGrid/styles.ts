@@ -16,7 +16,13 @@ export const Wrapper = styled.div`
     gap: ${theme.spacings.xlarge};
     padding: ${theme.spacings.small};
     @media ${theme.media.lteSmall} {
-      grid-template-columns: 1fr;
+      margin-left: 0rem;
+      margin-right: 0rem;
+      margin-top: 7rem;
+      padding: ${theme.spacings.small} ${theme.spacings.large};
+      max-width: 100vw;
+      display: flex;
+      flex-direction: column;
     }
   `}
 `;

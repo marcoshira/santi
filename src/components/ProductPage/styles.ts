@@ -11,6 +11,13 @@ export const Wrapper = styled.div`
     align-items: center;
     margin-top: 12rem;
     margin-left: 27rem;
+
+    @media ${theme.media.lteMedium} {
+      width: 100%;
+      margin-top: 8rem;
+      margin-left: auto;
+      max-width: 100vw;
+    }
   `}
 `;
 
@@ -24,6 +31,14 @@ export const ContentWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+
+    @media ${theme.media.lteMedium} {
+      justify-content: center;
+      flex-direction: column;
+      min-height: 55rem;
+      padding: ${theme.spacings.small};
+      position: relative;
+    }
   `}
 `;
 
@@ -36,11 +51,29 @@ export const ImageWrapper = styled.div`
     border-radius: 10px;
     height: 35rem;
     width: 45%;
+    @media ${theme.media.lteMedium} {
+      height: auto;
+      width: 100%;
+
+      img {
+        height: 15rem;
+      }
+    }
 
     img {
       border-radius: 10px;
       max-height: 28rem;
       min-height: 25rem;
+    }
+
+    @media ${theme.media.lteMedium} {
+      height: auto;
+
+      img {
+        height: 15rem;
+        max-height: auto;
+        min-height: 0;
+      }
     }
   `}
 `;
@@ -97,6 +130,28 @@ export const TextWrapper = styled.div`
         color: ${theme.colors.thirdColor};
       }
     }
+
+    @media ${theme.media.lteMedium} {
+      width: 100%;
+      position: static;
+
+      svg {
+        top: 2rem;
+        right: 2rem;
+      }
+
+      p {
+        margin-left: ${theme.spacings.xsmall};
+      }
+
+      #title {
+        font-size: 3rem;
+      }
+
+      #price {
+        margin-top: 0rem;
+      }
+    }
   `}
 `;
 
@@ -141,6 +196,15 @@ export const InputWrapper = styled.div`
       border: 1px solid ${theme.colors.grey};
       height: 35px;
     }
+
+    @media ${theme.media.lteMedium} {
+      width: 100%;
+      margin: 1rem 0;
+      padding: ${theme.spacings.xsmall};
+      label {
+        margin: 7px ${theme.spacings.huge} 0 0;
+      }
+    }
   `}
 `;
 
@@ -180,6 +244,18 @@ export const ButtonContainer = styled.div`
           border: 2px solid ${theme.colors.teal};
           background: ${theme.colors.hoverTeal};
         }
+      }
+    }
+
+    @media ${theme.media.lteMedium} {
+      flex-direction: column;
+      position: static;
+      width: 100%;
+      padding: ${theme.spacings.xxsmall};
+      ${Btn} {
+        width: 100%;
+        min-width: auto;
+        margin: ${theme.spacings.tiny} 0;
       }
     }
   `}

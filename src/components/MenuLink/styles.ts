@@ -14,5 +14,9 @@ export const Container = styled.a`
       border-right: 0.5rem solid ${theme.colors.thirdColor};
       color: ${theme.colors.thirdColor};
     }
+
+    @media ${theme.media.lteMedium} {
+      border-right: none;
+    }
   `}
 `;

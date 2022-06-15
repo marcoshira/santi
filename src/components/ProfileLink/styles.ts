@@ -16,10 +16,21 @@ export const Wrapper = styled.form`
     margin-left: 50rem;
     margin-top: 15rem;
 
+    @media ${theme.media.lteMedium} {
+      margin: 13rem auto;
+      width: 85%;
+      height: 45rem;
+    }
+
     p {
       position: absolute;
       bottom: 0.5rem;
       left: 2rem;
+
+      @media ${theme.media.lteMedium} {
+        bottom: 6rem;
+        left: 3rem;
+      }
     }
 
     ${Title} {
@@ -62,40 +73,11 @@ export const Wrapper = styled.form`
           content: none;
         }
       }
-    }
-  `}
-`;
 
-export const Input = styled.div`
-  ${({ theme }) => css`
-    padding: ${theme.spacings.xxsmall} 0;
-    position: relative;
-    margin-bottom: ${theme.spacings.small};
-    height: 4rem;
-    width: 100%;
-    input {
-      /* height: 3rem; */
-      width: 40rem;
-      font-size: ${theme.font.sizes.normal};
-      padding: ${theme.spacings.xxsmall} 0.5rem;
-      position: absolute;
-      right: 1.2rem;
-      border-radius: ${theme.spacings.tiny};
-      border: 1px solid ${theme.colors.gray3};
-      background: ${theme.colors.footerWhite};
-      transition: ${theme.transitions.fast};
-      outline: none;
-
-      &:focus {
-        border: ${theme.spacings.xxtiny} solid ${theme.colors.teal};
-        box-shadow: 0 0 ${theme.spacings.xtiny} 0 ${theme.colors.teal};
-        background: ${theme.colors.footerWhite};
+      @media ${theme.media.lteMedium} {
+        left: 3rem;
+        right: 3rem;
       }
-    }
-
-    label {
-      position: absolute;
-      top: 1.7rem;
     }
   `}
 `;

@@ -17,6 +17,7 @@ export const CartCard = ({
 
   const handleCart = async (quant: number, id: string) => {
     setCartLoading(true);
+    /* istanbul ignore else */
     if (onCart) {
       await onCart(quant, id);
     }
@@ -24,6 +25,7 @@ export const CartCard = ({
   };
   const handlePurchase = async (quant: number, id: string) => {
     setPurchaseLoading(true);
+    /* istanbul ignore else */
     if (onPurchase) {
       await onPurchase(quant, id);
     }

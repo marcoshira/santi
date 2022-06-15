@@ -8,8 +8,7 @@ export const Container = styled.nav`
     padding: 5px 0;
 
     @media ${theme.media.lteMedium} {
-      flex-flow: column wrap;
-      align-content: center;
+      margin-right: ${theme.spacings.ltmedium};
     }
 
     a {
@@ -26,6 +25,11 @@ export const Container = styled.nav`
       margin-bottom: 4px;
       position: relative;
       transition: all 300ms ease-in-out;
+
+      @media ${theme.media.lteMedium} {
+        padding: ${theme.spacings.xxsmall} ${theme.spacings.xxtiny};
+        margin-left: 0;
+      }
 
       &:disabled {
         background: ${theme.colors.mediumGrey};
@@ -74,6 +78,11 @@ export const SvgContainer = styled.div`
     margin-top: 10px;
     margin-left: ${theme.spacings.medium};
     transition: all 300ms ease-in-out;
+
+    @media ${theme.media.lteMedium} {
+      margin-left: ${theme.spacings.ltmedium};
+    }
+
     svg {
       height: 30px;
       transition: all 300ms ease-in-out;

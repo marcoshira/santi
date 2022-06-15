@@ -7,6 +7,11 @@ export const Wrapper = styled.a`
     cursor: pointer;
     min-width: 30rem;
     max-width: 40rem;
+
+    @media ${theme.media.lteSmall} {
+      max-width: 30rem;
+      min-width: auto;
+    }
   `}
 `;
 
@@ -29,6 +34,12 @@ export const CardWrapper = styled.div`
         color: ${theme.colors.thirdColor};
       }
     }
+
+    @media ${theme.media.lteSmall} {
+      &:hover {
+        opacity: 1;
+      }
+    }
   `}
 `;
 
@@ -43,6 +54,13 @@ export const ImageWrapper = styled.figure`
     img {
       max-height: 90%;
       max-width: 90%;
+      transition: all 300ms ease-in-out;
+
+      @media ${theme.media.lteSmall} {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
     }
   `}
 `;

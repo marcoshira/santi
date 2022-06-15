@@ -6,7 +6,7 @@ import mock from '../ProfileComponent/mock';
 export default {
   title: 'FavoriteLink',
   component: FavoriteLink,
-  args: mock.data.usersPermissionsUser.data.attributes.favorite,
+  args: mock.usersPermissionsUser.data.attributes.favorite,
 } as Meta<FavoriteProps>;
 
 export const Template: Story<FavoriteProps> = (args) => {

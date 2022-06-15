@@ -1,8 +1,6 @@
-import { Session } from 'inspector';
 import React, { ButtonHTMLAttributes, InputHTMLAttributes } from 'react';
 import { LoadProductVariables } from '../api/load-products';
 import { InputProps } from '../components/ProductPage';
-import { StrapiSession } from '../templates/Home';
 
 export type ButtonProps = {
   children: React.ReactNode;

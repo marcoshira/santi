@@ -22,7 +22,7 @@ export const ProfileLink = ({
   const handleSubmit = async (event: React.FormEvent) => {
     setLoading(true);
     event.preventDefault();
-
+    /* istanbul ignore else */
     if (onSubmit) {
       await onSubmit(changeUsername, changeTelephone, changeAddress);
     }

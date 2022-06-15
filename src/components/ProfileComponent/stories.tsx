@@ -8,10 +8,23 @@ import mock from './mock';
 export default {
   title: 'ProfileComponent',
   component: ProfileComponent,
-  args: mock.data.usersPermissionsUser.data.attributes,
+  parameters: {
+    layout: 'fullscreen',
+  },
+  args: mock.usersPermissionsUser.data.attributes,
 } as Meta<ProfileComponentProps>;
 
 export const Template: Story<ProfileComponentProps> = (args) => {
+  return (
+    <div>
+      <Menu />
+      <ToggleTheme />
+      <ProfileComponent {...args} />
+    </div>
+  );
+};
+
+export const Mobile: Story<ProfileComponentProps> = (args) => {
   return (
     <div>
       <Menu />

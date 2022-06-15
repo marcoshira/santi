@@ -6,12 +6,15 @@ import mock from '../ProfileComponent/mock';
 export default {
   title: 'ProfileLink',
   component: ProfileLink,
-  args: mock.data.usersPermissionsUser.data.attributes,
+  parameters: {
+    layout: 'fullscreen',
+  },
+  args: mock.usersPermissionsUser.data.attributes,
 } as Meta<ProfileComponentProps>;
 
 export const Template: Story<ProfileComponentProps> = (args) => {
   return (
-    <div>
+    <div id="oi" style={{ width: '80vw', margin: '0' }}>
       <ProfileLink {...args} />
     </div>
   );

@@ -1,7 +1,6 @@
 import { AccountCircle } from '@styled-icons/material-outlined/AccountCircle';
 import { ShoppingBag } from '@styled-icons/material-outlined/ShoppingBag';
 import { FavoriteBorder } from '@styled-icons/material-outlined/FavoriteBorder';
-import { Button } from '../Button';
 import * as Styled from './styles';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';

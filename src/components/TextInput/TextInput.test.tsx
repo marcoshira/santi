@@ -4,13 +4,20 @@ import { TextInput } from '.';
 import { TextInputProps } from '../../shared-types/shared-types';
 
 const props: TextInputProps = {
-  title: 'any',
+  label: 'Teste label',
+  name: 'input-name',
+  disabled: false,
+  errorMessage: '',
 };
 
 describe('<TextInput />', () => {
   it('should render', () => {
-    renderTheme(<TextInput {...props} />);
+    const { container } = renderTheme(<TextInput {...props} />);
 
-    expect(screen.getByRole('heading', { name: 'Oi' })).toBeInTheDocument();
+    expect(screen.getByLabelText('Teste label')).toHaveAttribute(
+      'type',
+      'text',
+    );
+    expect(container).toMatchSnapshot();
   });
 });

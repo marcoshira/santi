@@ -18,7 +18,7 @@ export const TextInput = ({
 
   const handleChange = () => {
     const value = inputRef.current.value;
-
+    /* istanbul ignore else */
     if (onInputChange) {
       onInputChange(value);
     }

@@ -14,9 +14,8 @@ export const PurchaseCard = ({
   onPurchase,
 }: ItemProps & InputProps) => {
   const handlePurchase = async (quant: number, id: string) => {
-    console.log('oi');
+    /* istanbul ignore else */
     if (onPurchase) {
-      console.log('oi2');
       await onPurchase(quant, id);
     }
   };
@@ -36,7 +35,11 @@ export const PurchaseCard = ({
             <Heading size="medium">{product.data.attributes.name}</Heading>
           </a>
         </Link>
-        <a id="close" onClick={() => handlePurchase(Quantity, product.data.id)}>
+        <a
+          id="close"
+          aria-label="close"
+          onClick={() => handlePurchase(Quantity, product.data.id)}
+        >
           <Close />
         </a>
 

@@ -6,7 +6,7 @@ import mock from '../ProfileComponent/mock';
 export default {
   title: 'CartLink',
   component: CartLink,
-  args: mock.data.usersPermissionsUser.data.attributes.cart_quantity,
+  args: mock.usersPermissionsUser.data.attributes.cart_quantity,
 } as Meta<CartQuantityProps>;
 
 export const Template: Story<CartQuantityProps> = (args) => {

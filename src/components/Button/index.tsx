@@ -7,6 +7,7 @@ export const Button = ({
   onClick = null,
 }: ButtonProps) => {
   const handleClick = () => {
+    /* istanbul ignore else */
     if (onClick) {
       onClick();
     }

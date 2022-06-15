@@ -9,10 +9,16 @@ const iconChanger = (defaultChecked: boolean) => css`
 `;
 
 export const Wrapper = styled.div`
-  position: fixed;
-  top: 8rem;
-  right: 2rem;
-  z-index: 6;
+  ${({ theme }) => css`
+    position: fixed;
+    top: 8rem;
+    right: 2rem;
+    z-index: 6;
+
+    @media ${theme.media.lteSmall} {
+      right: 3.5rem;
+    }
+  `}
 `;
 
 export const Label = styled.label`

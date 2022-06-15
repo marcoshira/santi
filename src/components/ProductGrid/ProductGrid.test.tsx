@@ -1,16 +1,14 @@
-import { screen } from '@testing-library/react';
 import { renderTheme } from '../../styles/render-theme';
 import { ProductGrid } from '.';
 import { ProductGridProps } from '../../shared-types/shared-types';
+import mock from './mock';
 
-const props: ProductGridProps = {
-  title: 'any',
-};
+const props: ProductGridProps = mock;
 
 describe('<ProductGrid />', () => {
   it('should render', () => {
-    renderTheme(<ProductGrid {...props} />);
+    const { container } = renderTheme(<ProductGrid {...props} />);
 
-    expect(screen.getByRole('heading', { name: 'Oi' })).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
   });
 });

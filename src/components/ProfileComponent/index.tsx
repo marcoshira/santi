@@ -6,6 +6,10 @@ import { MenuLink } from '../MenuLink';
 import { ProfileLink } from '../ProfileLink';
 import { PurchaseLink } from '../PurchaseLink';
 import * as Styled from './styles';
+import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu';
+import { Close as CloseIcon } from '@styled-icons/material-outlined/Close';
+import { Heading } from '../Heading';
+import Link from 'next/link';
 
 export const ProfileComponent = ({
   address,
@@ -26,8 +30,10 @@ export const ProfileComponent = ({
   onFavPurchase,
 }: ProfileComponentProps) => {
   const [navState, setNavState] = useState('profile');
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
+    /* istanbul ignore else */
     if (redirect) {
       setNavState(redirect);
     }
@@ -35,8 +41,23 @@ export const ProfileComponent = ({
 
   return (
     <Styled.Wrapper>
-      <Styled.Nav>
+      <Styled.Button
+        onClick={() => setVisible(!visible)}
+        aria-label="Open/Close Menu"
+      >
+        {visible ? (
+          <CloseIcon aria-label="Close Menu" />
+        ) : (
+          <MenuIcon aria-label="Open Menu" />
+        )}
+      </Styled.Button>
+      <Styled.Nav visible={visible} onClick={() => setVisible(!visible)}>
         <Styled.NavBar>
+          <Link href="/">
+            <a>
+              <Heading size="medium">SANTI</Heading>
+            </a>
+          </Link>
           <MenuLink onClick={() => setNavState('profile')}>Profile</MenuLink>
           <MenuLink onClick={() => setNavState('purchases')}>
             Purchases

@@ -24,7 +24,7 @@ export const FormRegister = ({
   const handleSubmit = async (event: React.FormEvent) => {
     setLoading(true);
     event.preventDefault();
-
+    /* istanbul ignore else */
     if (onRegister) {
       await onRegister(
         username,
@@ -95,9 +95,7 @@ export const FormRegister = ({
         errorMessage={errorMessage}
       />
       <Styled.ButtonWrapper>
-        <Button disabled={loading}>
-          {loading ? 'Logging In' : 'Register'}
-        </Button>
+        <Button disabled={loading}>{loading ? 'Loading' : 'Register'}</Button>
       </Styled.ButtonWrapper>
     </Styled.Wrapper>
   );

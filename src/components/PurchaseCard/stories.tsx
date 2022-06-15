@@ -6,7 +6,7 @@ import mock from '../ProfileComponent/mock';
 export default {
   title: 'PurchaseCard',
   component: PurchaseCard,
-  args: mock.data.usersPermissionsUser.data.attributes.puchase.data.attributes
+  args: mock.usersPermissionsUser.data.attributes.puchase.data.attributes
     .Item[0],
 } as Meta<ItemProps>;
 

@@ -26,6 +26,7 @@ export const ProductPage = ({
   onCart,
   onPurchase,
 }: ProductCardArrayProps & InputProps) => {
+  /* istanbul ignore next */
   const { data: session } = useSession();
 
   const maxLength = 350;

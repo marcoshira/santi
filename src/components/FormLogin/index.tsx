@@ -14,7 +14,7 @@ export const FormLogin = ({ errorMessage, onLogin }: FormLoginProps) => {
   const handleSubmit = async (event: React.FormEvent) => {
     setLoading(true);
     event.preventDefault();
-
+    /* istanbul ignore else */
     if (onLogin) {
       await onLogin(email, password);
     }

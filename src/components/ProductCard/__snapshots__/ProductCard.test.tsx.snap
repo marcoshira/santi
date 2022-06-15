@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductCard /> should render 1`] = `
+.c0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0A1128;
+  cursor: pointer;
+  min-width: 30rem;
+  max-width: 40rem;
+}
+
+.c1 {
+  box-shadow: 3px 3px 15px #8c4bff;
+  border-radius: 15px;
+  min-height: 35rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  background: #FFFFFF;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.c1:hover {
+  opacity: 0.8;
+}
+
+.c1:hover p {
+  color: #ff4a4a;
+}
+
+.c2 {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 26rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c2 img {
+  max-height: 90%;
+  max-width: 90%;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 2rem;
+}
+
+.c3 p {
+  margin: 1rem 0 0 0;
+  font-size: 1.8rem;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+@media (max-width:440px) {
+  .c0 {
+    max-width: 30rem;
+    min-width: auto;
+  }
+}
+
+@media (max-width:440px) {
+  .c1:hover {
+    opacity: 1;
+  }
+}
+
+@media (max-width:440px) {
+  .c2 img:hover {
+    opacity: 0.8;
+  }
+}
+
+<div>
+  <a
+    class="c0"
+    href="/products/2"
+  >
+    <div
+      class="c1"
+    >
+      <figure
+        class="c2"
+      >
+        <img
+          src="https://res.cloudinary.com/djqrityvi/image/upload/v1652740674/ps5_8a252e1eaa.jpg"
+        />
+      </figure>
+      <div
+        class="c3"
+      >
+        <p>
+          PlayStation 5
+        </p>
+        <p>
+          R$ 
+          4799.99
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+`;

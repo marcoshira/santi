@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormLogin /> should render with errorMessage 1`] = `
+.c0 {
+  width: 100%;
+  margin-top: 3.2rem;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 > svg {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: rgb(141,141,144);
+  z-index: 1;
+  color: rgb(247,38,115);
+}
+
+.c1 *:focus ~ svg {
+  color: #8c4bff;
+  color: rgb(247,38,115);
+}
+
+.c1 *:disabled ~ svg {
+  color: rgb(201,201,203);
+}
+
+.c2 {
+  border: 1px solid rgb(201,201,203);
+  width: 100%;
+  height: 100%;
+  font-size: 1.8rem;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  padding: 1.6rem 1rem;
+  background: #FFFFFF;
+  padding-right: 3.7rem;
+  border-radius: 0.4rem;
+  outline: none;
+  border: 0.1rem solid rgb(247,38,115);
+  box-shadow: 0 0 0.2rem 0 rgb(247,38,115);
+}
+
+.c2::-webkit-input-placeholder {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.c2::-moz-placeholder {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.c2:-ms-input-placeholder {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.c2::placeholder {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.c2:focus {
+  border: 0.1rem solid #8c4bff;
+  box-shadow: 0 0 0.2rem 0 #8c4bff;
+  background: #FFFFFF;
+}
+
+.c2:focus + .c3,
+.c2:not(:placeholder-shown) + .c3,
+.c2:-webkit-autofill + .c3 {
+  top: 0;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  background: #8c4bff;
+}
+
+.c2:disabled {
+  background: rgb(241,241,243);
+  color: rgb(161,161,164);
+}
+
+.c2:disabled + .c3 {
+  background: rgb(161,161,164);
+  color: rgb(221,221,223);
+}
+
+.c2:focus {
+  border: 0.1rem solid rgb(247,38,115);
+  box-shadow: 0 0 0.2rem 0 rgb(247,38,115);
+}
+
+.c2:focus + .c3,
+.c2:not(:placeholder-shown) + .c3 {
+  color: #FFFFFF;
+  background: rgb(247,38,115);
+}
+
+.c4 {
+  display: inline;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  left: 1rem;
+  font-size: 1.6rem;
+  height: 1.6rem;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  background: #FFFFFF;
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1;
+  z-index: 1;
+  color: rgb(141,141,144);
+  border-radius: 0.4rem;
+}
+
+.c6 {
+  color: rgb(247,38,115);
+  margin: 0.8rem 0 3.2rem;
+}
+
+.c5 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c9 {
+  padding: 0.8rem 1rem;
+  background: inherit;
+  color: #8c4bff;
+  border: none;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-left: 0.8rem;
+  margin-top: 5px;
+  margin-bottom: 4px;
+  position: relative;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.c9:disabled {
+  background: #DDDDDD;
+  color: #FFFFFF;
+  border: 2px solid #DDDDDD;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.c9:disabled:hover {
+  background: #DDDDDD;
+  color: #FFFFFF;
+  border: 2px solid #DDDDDD;
+  cursor: not-allowed;
+}
+
+.c9:disabled::after {
+  content: none;
+}
+
+.c9:hover {
+  color: #ff4a4a;
+  cursor: pointer;
+}
+
+.c9::after {
+  content: '';
+  position: absolute;
+  bottom: 0.2rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  background: #ff4a4a;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.c9:hover::after {
+  left: 25%;
+  width: 50%;
+}
+
+.c7 {
+  margin-top: 2.4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c7 .c8 {
+  width: 15rem;
+  border: 2px solid #8c4bff;
+  background: #8c4bff;
+  color: #FFFFFF;
+  border-radius: 0.4rem;
+  margin-left: 0;
+}
+
+.c7 .c8 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.c7 .c8:hover {
+  background: #6d39c7;
+}
+
+.c7 .c8::after {
+  height: 0;
+}
+
+.c7 .c8:disabled {
+  background: #DDDDDD;
+  color: #FFFFFF;
+  border: 2px solid #DDDDDD;
+}
+
+.c7 .c8:disabled:hover {
+  background: #DDDDDD;
+  color: #FFFFFF;
+  border: 2px solid #DDDDDD;
+  cursor: not-allowed;
+}
+
+.c7 .c8:disabled::after {
+  content: none;
+}
+
+@media (max-width:440px) {
+  .c7 .c8 {
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+}
+
+<div>
+  <form
+    class=""
+  >
+    <div
+      class="c0"
+    >
+      <div
+        class="c1"
+      >
+        <input
+          class="c2"
+          id="user-identifier"
+          name="user-identifier"
+          placeholder="Email"
+          type="email"
+          value=""
+        />
+        <label
+          class="c3 c4"
+          for="user-identifier"
+        >
+          Email
+        </label>
+        <svg
+          aria-hidden="true"
+          class="c5"
+          fill="currentColor"
+          focusable="false"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0h24v24H0V0z"
+            fill="none"
+          />
+          <path
+            d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"
+          />
+        </svg>
+      </div>
+      <p
+        class="c6"
+      >
+         
+      </p>
+    </div>
+    <div
+      class="c0"
+    >
+      <div
+        class="c1"
+      >
+        <input
+          class="c2"
+          id="user-password"
+          name="user-password"
+          placeholder="Password"
+          type="password"
+          value=""
+        />
+        <label
+          class="c3 c4"
+          for="user-password"
+        >
+          Password
+        </label>
+        <svg
+          aria-hidden="true"
+          class="c5"
+          fill="currentColor"
+          focusable="false"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0h24v24H0V0z"
+            fill="none"
+          />
+          <path
+            d="M2 17h20v2H2v-2zm1.15-4.05L4 11.47l.85 1.48 1.3-.75-.85-1.48H7v-1.5H5.3l.85-1.47L4.85 7 4 8.47 3.15 7l-1.3.75.85 1.47H1v1.5h1.7l-.85 1.48 1.3.75zm6.7-.75l1.3.75.85-1.48.85 1.48 1.3-.75-.85-1.48H15v-1.5h-1.7l.85-1.47-1.3-.75L12 8.47 11.15 7l-1.3.75.85 1.47H9v1.5h1.7l-.85 1.48zM23 9.22h-1.7l.85-1.47-1.3-.75L20 8.47 19.15 7l-1.3.75.85 1.47H17v1.5h1.7l-.85 1.48 1.3.75.85-1.48.85 1.48 1.3-.75-.85-1.48H23v-1.5z"
+          />
+        </svg>
+      </div>
+      <p
+        class="c6"
+      >
+        oi
+      </p>
+    </div>
+    <div
+      class="c7"
+    >
+      <button
+        class="c8 c9"
+      >
+        Log In
+      </button>
+    </div>
+  </form>
+</div>
+`;

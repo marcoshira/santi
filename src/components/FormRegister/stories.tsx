@@ -1,7 +1,8 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { FormRegister } from '.';
 import { FormRegisterProps } from '../../shared-types/shared-types';
-import { ToggleTheme } from '../ToggleTheme';
+import { HomePage } from '../../templates/HomePage';
+import { RegWrapper } from '../RegWrapper';
 
 export default {
   title: 'FormRegister',
@@ -19,6 +20,17 @@ export default {
     },
   ],
 } as Meta<FormRegisterProps>;
+
+export const Mobile: Story<FormRegisterProps> = (args) => {
+  return (
+    <>
+      <HomePage />
+      <RegWrapper>
+        <FormRegister {...args} />
+      </RegWrapper>
+    </>
+  );
+};
 
 export const Template: Story<FormRegisterProps> = (args) => {
   return <FormRegister {...args} />;

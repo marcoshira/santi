@@ -15,6 +15,16 @@ export const Wrapper = styled.div`
     padding: ${theme.spacings.small} 0;
     margin-bottom: ${theme.spacings.ltmedium};
 
+    @media ${theme.media.lteMedium} {
+      flex-direction: column;
+      min-height: 45rem;
+      width: 85%;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: ${theme.spacings.xhero};
+      margin: ${theme.spacings.medium} auto;
+    }
+
     #close {
       position: absolute;
       top: 2rem;
@@ -38,6 +48,9 @@ export const Wrapper = styled.div`
       border-radius: 10px;
       height: 20rem;
       transition: ${theme.transitions.faster};
+      @media ${theme.media.lteMedium} {
+        height: 15rem;
+      }
     }
 
     ${Title} {
@@ -80,12 +93,21 @@ export const Wrapper = styled.div`
           content: none;
         }
       }
+
+      @media ${theme.media.lteMedium} {
+        left: 2rem;
+        right: 2rem;
+      }
     }
   `}
 `;
 
 export const ContentWrapper = styled.div`
   ${({ theme }) => css`
+    @media ${theme.media.lteMedium} {
+      width: 100%;
+      padding: ${theme.spacings.medium};
+    }
     a {
       text-decoration: none;
       color: ${theme.colors.navy};
@@ -100,6 +122,10 @@ export const ContentWrapper = styled.div`
       color: ${theme.colors.gray6};
       position: absolute;
       bottom: 0.5rem;
+
+      @media ${theme.media.lteMedium} {
+        bottom: 6.5rem;
+      }
     }
   `}
 `;
@@ -109,5 +135,12 @@ export const ImageWrapper = styled.div`
     display: flex;
     justify-content: center;
     width: 45%;
+
+    @media ${theme.media.lteMedium} {
+      /* display: block; */
+      width: auto;
+      /* position: absolute;
+      top: 2.5rem; */
+    }
   `}
 `;

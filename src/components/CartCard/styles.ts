@@ -16,6 +16,15 @@ export const Wrapper = styled.div`
     padding: ${theme.spacings.small} 0;
     margin-bottom: ${theme.spacings.ltmedium};
 
+    @media ${theme.media.lteMedium} {
+      flex-direction: column;
+      min-height: 50rem;
+      width: 85%;
+      justify-content: center;
+      align-items: center;
+      margin: ${theme.spacings.medium} auto;
+    }
+
     a {
       cursor: pointer;
       &:hover {
@@ -29,6 +38,10 @@ export const Wrapper = styled.div`
       border-radius: 10px;
       height: 20rem;
       transition: ${theme.transitions.faster};
+
+      @media ${theme.media.lteMedium} {
+        height: 15rem;
+      }
     }
 
     ${Title} {
@@ -48,6 +61,11 @@ export const ContentWrapper = styled.div`
         color: ${theme.colors.thirdColor};
       }
     }
+
+    @media ${theme.media.lteMedium} {
+      width: 100%;
+      padding: ${theme.spacings.medium};
+    }
   `}
 `;
 
@@ -66,6 +84,7 @@ export const ButtonContainer = styled.div`
     flex-direction: row;
     margin-top: 2rem;
     margin-right: 2rem;
+
     ${Btn} {
       min-width: 48%;
 
@@ -93,6 +112,16 @@ export const ButtonContainer = styled.div`
           border: 2px solid ${theme.colors.teal};
           background: ${theme.colors.hoverTeal};
         }
+      }
+    }
+
+    @media ${theme.media.lteMedium} {
+      flex-direction: column;
+      margin-right: 0rem;
+
+      ${Btn} {
+        width: 100%;
+        margin: ${theme.spacings.tiny} 0;
       }
     }
   `}

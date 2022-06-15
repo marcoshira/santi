@@ -1,7 +1,8 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { FormLogin } from '.';
 import { FormLoginProps } from '../../shared-types/shared-types';
-import { ToggleTheme } from '../ToggleTheme';
+import { HomePage } from '../../templates/HomePage';
+import { Wrapper } from '../Wrapper';
 
 export default {
   title: 'FormLogin',
@@ -22,6 +23,17 @@ export default {
 
 export const Template: Story<FormLoginProps> = (args) => {
   return <FormLogin {...args} />;
+};
+
+export const Mobile: Story<FormLoginProps> = (args) => {
+  return (
+    <>
+      <HomePage />
+      <Wrapper>
+        <FormLogin {...args} />
+      </Wrapper>
+    </>
+  );
 };
 
 export const WithError: Story<FormLoginProps> = (args) => {

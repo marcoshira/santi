@@ -6,7 +6,7 @@ import mock from '../ProfileComponent/mock';
 export default {
   title: 'FavoriteCard',
   component: FavoriteCard,
-  args: mock.data.usersPermissionsUser.data.attributes.favorite.data.attributes
+  args: mock.usersPermissionsUser.data.attributes.favorite.data.attributes
     .products.data[0],
 } as Meta<ProductCardArrayProps>;
 

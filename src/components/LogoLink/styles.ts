@@ -11,5 +11,10 @@ export const Container = styled.a`
     &:hover {
       color: ${theme.colors.thirdColor};
     }
+
+    @media ${theme.media.lteMedium} {
+      /* margin-left: ${theme.spacings.medium}; */
+      display: none;
+    }
   `};
 `;

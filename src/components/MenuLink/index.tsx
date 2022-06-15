@@ -8,6 +8,7 @@ export type MenuLinkProps = {
 
 export const MenuLink = ({ children, link, onClick }: MenuLinkProps) => {
   const handleClick = () => {
+    /* istanbul ignore else */
     if (onClick) {
       onClick();
     }

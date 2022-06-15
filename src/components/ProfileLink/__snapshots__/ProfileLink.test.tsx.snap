@@ -1,0 +1,394 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProfileLink /> should render with errorMessage 1`] = `
+.c10 {
+  padding: 0.8rem 1rem;
+  background: inherit;
+  color: #8c4bff;
+  border: none;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-left: 0.8rem;
+  margin-top: 5px;
+  margin-bottom: 4px;
+  position: relative;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.c10:disabled {
+  background: #DDDDDD;
+  color: #FFFFFF;
+  border: 2px solid #DDDDDD;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.c10:disabled:hover {
+  background: #DDDDDD;
+  color: #FFFFFF;
+  border: 2px solid #DDDDDD;
+  cursor: not-allowed;
+}
+
+.c10:disabled::after {
+  content: none;
+}
+
+.c10:hover {
+  color: #ff4a4a;
+  cursor: pointer;
+}
+
+.c10::after {
+  content: '';
+  position: absolute;
+  bottom: 0.2rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  background: #ff4a4a;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.c10:hover::after {
+  left: 25%;
+  width: 50%;
+}
+
+.c2 {
+  color: inherit;
+  font-size: 3.2rem;
+  text-transform: none;
+}
+
+.c3 {
+  width: 100%;
+  margin-top: 3.2rem;
+}
+
+.c4 {
+  position: relative;
+}
+
+.c4 > svg {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: rgb(141,141,144);
+  z-index: 1;
+  color: rgb(247,38,115);
+}
+
+.c4 *:focus ~ svg {
+  color: #8c4bff;
+  color: rgb(247,38,115);
+}
+
+.c4 *:disabled ~ svg {
+  color: rgb(201,201,203);
+}
+
+.c5 {
+  border: 1px solid rgb(201,201,203);
+  width: 100%;
+  height: 100%;
+  font-size: 1.8rem;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  padding: 1.6rem 1rem;
+  background: #FFFFFF;
+  padding-right: 3.7rem;
+  border-radius: 0.4rem;
+  outline: none;
+  border: 0.1rem solid rgb(247,38,115);
+  box-shadow: 0 0 0.2rem 0 rgb(247,38,115);
+}
+
+.c5::-webkit-input-placeholder {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.c5::-moz-placeholder {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.c5:-ms-input-placeholder {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.c5::placeholder {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.c5:focus {
+  border: 0.1rem solid #8c4bff;
+  box-shadow: 0 0 0.2rem 0 #8c4bff;
+  background: #FFFFFF;
+}
+
+.c5:focus + .c6,
+.c5:not(:placeholder-shown) + .c6,
+.c5:-webkit-autofill + .c6 {
+  top: 0;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  background: #8c4bff;
+}
+
+.c5:disabled {
+  background: rgb(241,241,243);
+  color: rgb(161,161,164);
+}
+
+.c5:disabled + .c6 {
+  background: rgb(161,161,164);
+  color: rgb(221,221,223);
+}
+
+.c5:focus {
+  border: 0.1rem solid rgb(247,38,115);
+  box-shadow: 0 0 0.2rem 0 rgb(247,38,115);
+}
+
+.c5:focus + .c6,
+.c5:not(:placeholder-shown) + .c6 {
+  color: #FFFFFF;
+  background: rgb(247,38,115);
+}
+
+.c7 {
+  display: inline;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  left: 1rem;
+  font-size: 1.6rem;
+  height: 1.6rem;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  background: #FFFFFF;
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1;
+  z-index: 1;
+  color: rgb(141,141,144);
+  border-radius: 0.4rem;
+}
+
+.c8 {
+  color: rgb(247,38,115);
+  margin: 0.8rem 0 3.2rem;
+}
+
+.c0 {
+  box-shadow: 3px 3px 15px #8c4bff;
+  border-radius: 15px;
+  background: #FFFFFF;
+  width: 45%;
+  padding: 2.8rem;
+  padding-top: 1.6rem;
+  position: relative;
+  padding-bottom: 8.0rem;
+  margin-left: 50rem;
+  margin-top: 15rem;
+}
+
+.c0 p {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 2rem;
+}
+
+.c0 .c1 {
+  margin-top: 0;
+}
+
+.c0 .c9 {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 4rem;
+  border: 2px solid #8c4bff;
+  background: #8c4bff;
+  color: #FFFFFF;
+  border-radius: 0.4rem;
+  margin-left: 0;
+}
+
+.c0 .c9 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.c0 .c9:hover {
+  background: #6d39c7;
+}
+
+.c0 .c9::after {
+  height: 0;
+}
+
+.c0 .c9:disabled {
+  background: #DDDDDD;
+  color: #FFFFFF;
+  border: 2px solid #DDDDDD;
+}
+
+.c0 .c9:disabled:hover {
+  background: #DDDDDD;
+  color: #FFFFFF;
+  border: 2px solid #DDDDDD;
+  cursor: not-allowed;
+}
+
+.c0 .c9:disabled::after {
+  content: none;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    margin: 13rem auto;
+    width: 85%;
+    height: 45rem;
+  }
+}
+
+@media (max-width:768px) {
+  .c0 p {
+    bottom: 6rem;
+    left: 3rem;
+  }
+}
+
+@media (max-width:768px) {
+  .c0 .c9 {
+    left: 3rem;
+    right: 3rem;
+  }
+}
+
+<div>
+  <form
+    class="c0"
+  >
+    <h1
+      class="c1 c2"
+    >
+      My Profile
+    </h1>
+    <div
+      class="c3"
+    >
+      <div
+        class="c4"
+      >
+        <input
+          class="c5"
+          id="user-username"
+          name="user-username"
+          placeholder="Username"
+          type="text"
+          value="luisa"
+        />
+        <label
+          class="c6 c7"
+          for="user-username"
+        >
+          Username
+        </label>
+      </div>
+      <p
+        class="c8"
+      >
+         
+      </p>
+    </div>
+    <div
+      class="c3"
+    >
+      <div
+        class="c4"
+      >
+        <input
+          class="c5"
+          id="user-phone"
+          name="user-phone"
+          placeholder="Telephone"
+          type="tel"
+          value="2222 2222"
+        />
+        <label
+          class="c6 c7"
+          for="user-phone"
+        >
+          Telephone
+        </label>
+      </div>
+      <p
+        class="c8"
+      >
+         
+      </p>
+    </div>
+    <div
+      class="c3"
+    >
+      <div
+        class="c4"
+      >
+        <input
+          class="c5"
+          id="user-address"
+          name="user-address"
+          placeholder="Address"
+          type="text"
+          value="Rua Barão de spdaksadopk"
+        />
+        <label
+          class="c6 c7"
+          for="user-address"
+        >
+          Address
+        </label>
+      </div>
+      <p
+        class="c8"
+      >
+        oi
+      </p>
+    </div>
+    <button
+      class="c9 c10"
+    >
+      Save Changes
+    </button>
+    <p>
+      Created at: 
+      2022-05-16
+    </p>
+  </form>
+</div>
+`;
