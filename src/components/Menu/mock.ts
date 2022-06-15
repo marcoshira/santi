@@ -1,5 +1,3 @@
-import { MenuProps } from '.';
-
 export default {
   menuLink: [
     {
@@ -43,4 +41,4 @@ export default {
       },
     },
   },
-} as MenuProps;
+};
