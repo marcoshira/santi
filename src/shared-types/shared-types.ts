@@ -1,5 +1,4 @@
 import React, { ButtonHTMLAttributes, InputHTMLAttributes } from 'react';
-import { LoadProductVariables } from '../api/load-products';
 import { InputProps } from '../components/ProductPage';
 
 export type ButtonProps = {
@@ -56,7 +55,6 @@ export type FormRegisterProps = {
 export type ProductQueryProps = {
   data: ProductProps;
   types: ProductTypesProps;
-  variables?: LoadProductVariables;
   cartBool?: boolean;
   favBool?: boolean;
 };
@@ -64,7 +62,6 @@ export type ProductQueryProps = {
 export type ProductsByTypeQueryProps = {
   data: ProductGridPropsProducts;
   types: ProductTypesProps;
-  variables?: LoadProductVariables;
 };
 
 export type ProductDataProps = {
