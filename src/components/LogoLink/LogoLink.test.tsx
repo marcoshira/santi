@@ -4,7 +4,8 @@ import { renderTheme } from '../../styles/render-theme';
 
 describe('<LogoLink />', () => {
   it('should render text logo', () => {
-    renderTheme(<LogoLink />);
-    // expect(heading.firstChild).toHaveAttribute('href', '#target');
+    const { container } = renderTheme(<LogoLink />);
+    expect(screen.getByRole('link')).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
   });
 });

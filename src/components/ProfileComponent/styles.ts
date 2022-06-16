@@ -24,9 +24,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
-  ${({ theme }) => css`
-    width: 100%;
-  `}
+  width: 100%;
 `;
 
 export const NavBar = styled.nav`

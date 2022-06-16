@@ -70,11 +70,9 @@ export const ContentWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    justify-content: center;
-    width: 45%;
-  `}
+  display: flex;
+  justify-content: center;
+  width: 45%;
 `;
 
 export const ButtonContainer = styled.div`

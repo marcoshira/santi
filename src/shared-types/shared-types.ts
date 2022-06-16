@@ -21,7 +21,6 @@ export type TextInputProps = {
   errorMessage?: string;
   value?: string;
   icon?: React.ReactNode;
-  as?: 'input' | 'textarea';
   reference?: HTMLInputElement;
 } & InputHTMLAttributes<HTMLInputElement>;
 

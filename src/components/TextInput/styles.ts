@@ -55,9 +55,9 @@ export const InputWrapper = styled.div<Pick<TextInputProps, 'errorMessage'>>`
 `;
 
 export const Input = styled.input<
-  Pick<TextInputProps, 'errorMessage' | 'as' | 'type'>
+  Pick<TextInputProps, 'errorMessage' | 'type'>
 >`
-  ${({ theme, errorMessage, as }) => css`
+  ${({ theme, errorMessage }) => css`
     border: 1px solid ${theme.colors.gray3};
     width: 100%;
     height: 100%;
@@ -88,10 +88,6 @@ export const Input = styled.input<
       font-size: ${theme.font.sizes.xsmall};
       color: ${theme.colors.footerWhite};
       background: ${theme.colors.teal};
-      ${as === 'textarea' &&
-      css`
-        transform: translate(0, -50%);
-      `}
     }
     &:disabled {
       background: ${theme.colors.gray1};
@@ -101,16 +97,13 @@ export const Input = styled.input<
       background: ${theme.colors.gray5};
       color: ${theme.colors.gray2};
     }
-    ${as === 'textarea' &&
-    css`
-      min-height: ${theme.frameSizes.xsmall};
-    `}
+
     ${!!errorMessage && onInputError(theme, errorMessage)}
   `}
 `;
 
 export const Label = styled.label<{ element: string }>`
-  ${({ theme, element }) => css`
+  ${({ theme }) => css`
     display: inline;
     position: absolute;
     top: 50%;
@@ -127,11 +120,6 @@ export const Label = styled.label<{ element: string }>`
     z-index: ${theme.layers.layer1};
     color: ${theme.colors.gray6};
     border-radius: ${theme.spacings.tiny};
-    ${element === 'textarea' &&
-    css`
-      top: ${theme.spacings.large};
-      transform: translate(0, -50%);
-    `}
   `}
 `;
 

@@ -13,7 +13,6 @@ export const Container = styled.a`
     }
 
     @media ${theme.media.lteMedium} {
-      /* margin-left: ${theme.spacings.medium}; */
       display: none;
     }
   `};

@@ -3,7 +3,7 @@
 exports[`<Heading /> should match snapshot 1`] = `
 .c0 {
   color: inherit;
-  font-size: 6.4rem;
+  font-size: 5.6rem;
   text-transform: none;
 }
 

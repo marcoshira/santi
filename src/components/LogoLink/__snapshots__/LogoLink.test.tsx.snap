@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LogoLink /> should render text logo 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #8c4bff;
+  margin-left: 3.2rem;
+}
+
+.c1:hover {
+  color: #ff4a4a;
+}
+
+.c0 {
+  color: inherit;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+@media (max-width:768px) {
+  .c1 {
+    display: none;
+  }
+}
+
+<div>
+  <h1
+    class="c0"
+  >
+    <a
+      class="c1"
+      href="/"
+      target="_self"
+    >
+      Santi
+    </a>
+  </h1>
+</div>
+`;

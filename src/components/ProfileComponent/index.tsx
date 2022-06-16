@@ -30,7 +30,7 @@ export const ProfileComponent = ({
   onFavPurchase,
 }: ProfileComponentProps) => {
   const [navState, setNavState] = useState('profile');
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     /* istanbul ignore else */

@@ -14,6 +14,10 @@ export const Wrapper = styled.div`
       top: 6rem;
       margin: 0 auto;
 
+      p {
+        margin-left: ${theme.spacings.ltlarge};
+      }
+
       > ${Title} {
         margin-left: ${theme.spacings.ltlarge};
       }

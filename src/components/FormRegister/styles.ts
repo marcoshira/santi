@@ -1,9 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Wrapper as Button } from '../Button/styles';
 
-export const Wrapper = styled.form`
-  ${({ theme }) => css``}
-`;
+export const Wrapper = styled.form``;
 
 export const ButtonWrapper = styled.div`
   ${({ theme }) => css`
@@ -46,13 +44,5 @@ export const ButtonWrapper = styled.div`
         }
       }
     }
-  `}
-`;
-
-export const ErrorMessage = styled.p`
-  ${({ theme }) => css`
-    color: ${theme.colors.thirdColor};
-    font-size: ${theme.font.sizes.normal};
-    margin-top: ${theme.spacings.small};
   `}
 `;

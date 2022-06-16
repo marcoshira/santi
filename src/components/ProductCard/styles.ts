@@ -66,17 +66,15 @@ export const ImageWrapper = styled.figure`
 `;
 
 export const TextWrapper = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 2rem;
 
-    p {
-      margin: 1rem 0 0 0;
-      font-size: 1.8rem;
-      transition: all 300ms ease-in-out;
-    }
-  `}
+  p {
+    margin: 1rem 0 0 0;
+    font-size: 1.8rem;
+    transition: all 300ms ease-in-out;
+  }
 `;

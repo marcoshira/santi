@@ -17,6 +17,9 @@ export const Wrapper = styled.div`
       > ${Title} {
         margin-left: ${theme.spacings.ltlarge};
       }
+      p {
+        margin-left: ${theme.spacings.ltlarge};
+      }
     }
   `}
 `;

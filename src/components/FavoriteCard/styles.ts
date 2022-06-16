@@ -83,14 +83,12 @@ export const ContentWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  ${({ theme }) => css`
-    width: 45%;
-    display: flex;
-    justify-content: center;
+  width: 45%;
+  display: flex;
+  justify-content: center;
 
-    img {
-    }
-  `}
+  img {
+  }
 `;
 
 export const ButtonContainer = styled.div`

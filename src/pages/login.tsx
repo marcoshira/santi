@@ -29,7 +29,7 @@ export default function LoginPage() {
     <>
       <HomePage />
       <Wrapper>
-        <FormLogin onLogin={handleLogin} />
+        <FormLogin onLogin={handleLogin} errorMessage={error} />
       </Wrapper>
     </>
   );

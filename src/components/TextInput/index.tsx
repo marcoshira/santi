@@ -11,7 +11,6 @@ export const TextInput = ({
   errorMessage = '',
   value = '',
   icon = '',
-  as = 'input',
   reference = null,
 }: TextInputProps) => {
   const inputRef = useRef(reference);
@@ -36,13 +35,12 @@ export const TextInput = ({
           onChange={handleChange}
           placeholder={label}
           errorMessage={errorMessage}
-          as={as}
           defaultValue={value}
         />
-        <Styled.Label htmlFor={name} element={as}>
+        <Styled.Label htmlFor={name} element="input">
           {label}
         </Styled.Label>
-        {!!icon && as !== 'textarea' && icon}
+        {!!icon && icon}
       </Styled.InputWrapper>
 
       {!!errorMessage && (

@@ -28,7 +28,7 @@ export const Container = styled.nav`
 
       @media ${theme.media.lteMedium} {
         padding: ${theme.spacings.xxsmall} ${theme.spacings.xxtiny};
-        margin-left: 0;
+        margin-left: ${theme.spacings.xxsmall};
       }
 
       &:disabled {
