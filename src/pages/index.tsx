@@ -5,9 +5,17 @@ import {
   GQL_GET_PRODUCTS,
   GQL_GET_PRODUCT_TYPES,
 } from '../graphql/queries/product';
+import Head from 'next/head';
 
 export default function Index({ data, types }: HomeProps) {
-  return <Home data={data} types={types} />;
+  return (
+    <>
+      <Head>
+        <title>Santi | Marcos Hirazawa</title>
+      </Head>
+      <Home data={data} types={types} />
+    </>
+  );
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
