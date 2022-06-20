@@ -18,7 +18,7 @@ export default function Index({ data, types }: HomeProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const { products } = await gqlClient.request(GQL_GET_PRODUCTS, null, {});
     const { productTypes } = await gqlClient.request(
